@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
-    <link href="./style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <style type="text/tailwindcss">
         @layer utilities {
@@ -17,7 +17,7 @@
 
 </head>
 <body class="bg-pink-50">
-  
+  <div class="preloader"></div>
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
   <div class="max-w-screen-xl flex items-center justify-between mx-auto p-2">
       <a href="https://flowbite.com/" class="flex items-center space-x-2 rtl:space-x-reverse">
@@ -32,16 +32,16 @@
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-7 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                  <a href="index.html" class="block py-2 px-3 text-white bg-pink-700 rounded md:bg-transparent md:text-pink-700 md:p-0 dark:text-white md:dark:text-pink-500" aria-current="page">Home</a>
+                <a href="index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
               </li>
               <li>
                   <a href="about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
               </li>
               <li>
-                  <a href="events.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Events</a>
+                <a href="tracks.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Tracks</a>
               </li>
               <li>
-                  <a href="gallery.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gallery</a>
+                <a href="gallery.html" class="block py-2 px-3 text-white bg-pink-700 rounded md:bg-transparent md:text-pink-700 md:p-0 dark:text-white md:dark:text-pink-500" aria-current="page">Gallery</a>
               </li>
              
           </ul>
@@ -178,7 +178,20 @@
       
     </div>
   </div>
-  
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      var navbar = document.getElementById('navbar-default');
+      navbar.classList.toggle('hidden');
+      navbar.classList.toggle('block');
+  });
+    window.addEventListener('load', function () {
+      console.log("Page loaded"); // Check if this message appears in the browser's console
+      var preloader = document.querySelector('.preloader');
+      setTimeout(function() {
+        preloader.style.display = 'none'; // Hide the preloader
+      }, 1000); // Set the timeout to 1000 milliseconds (1 second)
+    });
+  </script>
 
 </body>
 </html>
