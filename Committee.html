@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <style>
+        .hero {
+           
+            background-size: cover;
+            background-position: center;
+            height: 0vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero { height: 50vh; font-size: 1.5rem; }
+        }
+
+        .fest-title { font-family: 'Roboto', sans-serif; }
+
+        /* Navbar Styling */
+        .nav-item:hover { color: #e60073; transition: 0.3s; }
+
+        /* Dropdown Menu */
+        .dropdown-menu { display: none; position: absolute; background-color: #fff; padding: 10px; border-radius: 5px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); }
+        .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+</head>
+<body>
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
+            <a href="index.html">
+                <img src="./images/WomenSummit1.png" class="h-12 md:h-16" alt="Logo">
+            </a>
+            <ul class="hidden md:flex space-x-6 text-gray-900">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="about.html" class="nav-item">About</a></li>
+                <li><a href="tracks.html" class="nav-item">Tracks</a></li>
+                <li class="relative dropdown">
+                    <a href="#" class="nav-item">Committee</a>
+                    <div class="dropdown-menu">
+                        <a href="Committee.html" class="block py-1 px-2">Chief Patron</a>
+                        <a href="cheifcoordinator.html" class="block py-1 px-2">Patrons & Advisors</a>
+                        <a href="conveners.html" class="block py-1 px-2">Conveners</a>
+                    </div>
+                </li>
+            </ul>
+            <button class="md:hidden text-gray-500">☰</button>
+        </div>
+    </nav>
+
+    <div class="hero"></div>
+
+    <div class="max-w-screen-xl mx-auto p-6">
+       
+        
+        <div class="mb-8">
+            <h2 class="text-xl font-semibold bg-blue-500 text-white p-2">Chief Patrons, Patrons & Advisors</h2>
+            <table class="w-full border-collapse border border-gray-400 mt-2">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border border-gray-400 p-2">Role</th>
+                        <th class="border border-gray-400 p-2">Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-400 p-2 text-center align-middle" rowspan="7">Chief Patrons</td>
+                        <td class="border border-gray-400 p-2 text-center">Er. Koneru Satyanarayana</td>
+                    </tr>
+                    
+                    <tr><td class="border border-gray-400 p-2">Smt. Koneru Siva Kanchana Latha</td></tr>
+                    <tr><td class="border border-gray-400 p-2">Sri. Koneru Lakshman Havish</td></tr>
+                    <tr><td class="border border-gray-400 p-2">Sri. Koneru Raja Hareen</td></tr>
+                    <tr><td class="border border-gray-400 p-2">Smt. Koneru Nikhila</td></tr>
+                    <tr><td class="border border-gray-400 p-2">Smt. Koneru Sri Divya</td></tr>
+                    <tr><td class="border border-gray-400 p-2">Dr. K. S. Jagannatha Rao</td></tr>
+                    <tr><td class="border border-gray-400 p-2" rowspan="4">Patrons & Advisors</td><td class="border border-gray-400 p-2">Dr. N. Venkatram</td></tr>
+                    <tr><td class="border border-gray-400 p-2">Dr. A.V.S. Prasad</td></tr>
+                    <tr><td class="border border-gray-400 p-2">Dr. K. Rajasekhara Rao</td></tr>
+                    <tr><td class="border border-gray-400 p-2">Dr. K. Subba Rao</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Chief Coordinators, Chairperson, Conveners & Co-Conveners -->
+        <div>
+            <h2 class="text-xl font-semibold bg-blue-500 text-white p-2 text-center">
+                Chief Coordinators, Chairperson, Conveners & Co-Conveners
+            </h2>
+            
+            <table class="w-full border-collapse border border-black mt-2">
+                <thead>
+                    <tr class="bg-gray-300">
+                        <th class="border border-black p-2 text-lg font-bold text-gray-900">Role</th>
+                        <th class="border border-black p-2 text-lg font-semibold text-gray-900">Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-black p-2 text-center align-middle text-lg font-bold text-gray-900" rowspan="5">Chief Coordinators</td>
+                        <td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. K R S Prasad</td>
+                    </tr>
+                    <tr><td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. Habibullah Khan</td></tr>
+                    <tr><td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. K. Rama Krishna</td></tr>
+                    <tr><td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. N. B. V. Prasad</td></tr>
+                    <tr><td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. V. Srikanth</td></tr>
+                    
+                    <tr>
+                        <td class="border border-black p-2 text-center align-middle text-lg font-bold text-gray-900" rowspan="3">Chairperson</td>
+                        <td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. K. Ruth Ramya</td>
+                    </tr>
+                    <tr><td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. K. Ch Sri Kavya</td></tr>
+                    <tr><td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. I Govardhini</td></tr>
+            
+                    <tr>
+                        <td class="border border-black p-2 text-center align-middle text-lg font-bold text-gray-900" rowspan="4">Conveners</td>
+                        <td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. P. Lakshmi Prasanna</td>
+                    </tr>
+                    <tr><td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. U. Haritha H</td></tr>
+                    <tr><td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. K. Hema Divya</td></tr>
+                    <tr><td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. A. Priya</td></tr>
+            
+                    <tr>
+                        <td class="border border-black p-2 text-center align-middle text-lg font-bold text-gray-900" rowspan="4">Co-Conveners</td>
+                        <td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. Mahamuda Shaik</td>
+                    </tr>
+                    <tr><td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. Y. Usha Devi</td></tr>
+                    <tr><td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. P. Vidyullatha</td></tr>
+                    <tr><td class="border border-black p-2 text-lg font-medium text-gray-800">Dr. K. Himabindu</td></tr>
+                </tbody>
+            </table>
+            
+            
+        </div>
+    </div>
+    
+
+    <script>
+        // JavaScript for dropdown menu
+        document.querySelector('.dropdown').addEventListener('mouseover', function () {
+            document.querySelector('.dropdown-menu').classList.remove('hidden');
+        });
+
+        document.querySelector('.dropdown').addEventListener('mouseleave', function () {
+            document.querySelector('.dropdown-menu').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
