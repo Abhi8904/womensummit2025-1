@@ -42,9 +42,28 @@
                     <a href="tracks.html" class="block py-2 px-3 text-white bg-pink-700 rounded md:bg-transparent md:text-pink-700 md:p-0 dark:text-white md:dark:text-pink-500" aria-current="page">Tracks</a>
 
                 </li>
-                <li>
-                    <a href="gallery.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gallery</a>
-                </li>
+                <ul>
+                  <!-- List Item for Committee -->
+                  <li class="relative">
+                    <a href="#" id="committeeLink" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                      Committee
+                    </a>
+                
+                    <!-- Dropdown Menu (initially hidden) -->
+                    <div id="dropdownMenu" class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-gray-900 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden">
+                      <a href="Committee.html" class="block px-4 py-2 text-sm text-gray-50 hover:text-gray-900">
+                        Chief Patron
+                      </a>
+                      <a href="patronsadvisors.html" class="block px-4 py-2 text-sm text-gray-50 hover:text-gray-900">
+                        Patrons & Advisors
+                      </a>
+                      <a href="conveners.html" class="block px-4 py-2 text-sm text-gray-50 hover:text-gray-900">
+                        Conveners
+                      </a>
+                      
+                    </div>
+                  </li>
+                </ul>
             </ul>
         </div>
     </div>
@@ -193,6 +212,13 @@
         preloader.style.display = 'none'; // Hide the preloader
       }, 1000); // Set the timeout to 1000 milliseconds (1 second)
     });
+    document.getElementById('committeeLink').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    var dropdown = document.getElementById('dropdownMenu');
+    
+    // Toggle the 'hidden' class to show/hide the dropdown
+    dropdown.classList.toggle('hidden');
+});
   </script>
 
 </body>
